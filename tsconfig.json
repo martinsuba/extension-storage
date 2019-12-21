@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "es2017",
+      "dom"
+    ],
+    "types": [
+      "mocha",
+      "chai"
+    ],
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "isolatedModules": true,
+  },
+  "include": [
+    "source/*"
+  ],
+  "exclude:": [
+    "node_modules",
+    "dist",
+    "coverage"
+  ]
+}
