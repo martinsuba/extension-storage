@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "karma start karma.config.js",
-    "build": "npm run clean && webpack --config ./build/webpack.config.js --mode=development",
+    "build": "npm run clean && webpack --config ./build/webpack.config.js --mode=development && npm run declaration",
     "build:production": "npm run clean && webpack --config ./build/webpack.config.js --mode=production && npm run declaration",
     "lint": "eslint --ignore-path .gitignore . --ext .js,.tsx,.ts",
     "clean": "del-cli dist",
@@ -30,6 +30,7 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-typescript": "^7.7.7",
     "@types/chai": "^4.2.7",
+    "@types/chrome": "0.0.91",
     "@types/mocha": "^5.2.7",
     "@types/sinon": "^7.5.1",
     "@typescript-eslint/eslint-plugin": "^2.12.0",

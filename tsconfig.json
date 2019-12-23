@@ -8,7 +8,8 @@
     ],
     "types": [
       "mocha",
-      "chai"
+      "chai",
+      "@types/chrome"
     ],
     "sourceMap": true,
     "esModuleInterop": true,
