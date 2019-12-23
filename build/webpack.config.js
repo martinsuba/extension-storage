@@ -12,6 +12,10 @@ module.exports = (target) => {
           '@babel/typescript',
         ],
         plugins: [
+          [
+            '@babel/plugin-transform-runtime',
+            { corejs: 2 },
+          ],
           '@babel/proposal-class-properties',
           '@babel/proposal-object-rest-spread',
         ],
@@ -28,7 +32,7 @@ module.exports = (target) => {
   const config = {
     mode: argv.mode || 'development',
     entry: {
-      index: '../source/index.ts',
+      index: '../source/browser-extension-storage.ts',
     },
     context: path.resolve(__dirname, '../source'),
     devtool: argv.mode === 'production' ? 'none' : 'inline-source-map',
