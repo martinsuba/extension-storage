@@ -11,14 +11,7 @@ module.exports = (target) => {
           '@babel/preset-env',
           '@babel/typescript',
         ],
-        plugins: [
-          [
-            '@babel/plugin-transform-runtime',
-            { corejs: 2 },
-          ],
-          '@babel/proposal-class-properties',
-          '@babel/proposal-object-rest-spread',
-        ],
+        plugins: [],
       },
     },
     include: [
@@ -32,7 +25,7 @@ module.exports = (target) => {
   const config = {
     mode: argv.mode || 'development',
     entry: {
-      index: '../source/browser-extension-storage.ts',
+      index: '../source/extension-storage.ts',
     },
     context: path.resolve(__dirname, '../source'),
     devtool: argv.mode === 'production' ? 'none' : 'inline-source-map',
@@ -57,6 +50,10 @@ module.exports = (target) => {
   };
 
   if (target === 'test') {
+    babelLoader.use.options.plugins.push([
+      '@babel/plugin-transform-runtime',
+      { corejs: 2 },
+    ]);
     babelLoader.use.options.plugins.push('istanbul');
   }
 

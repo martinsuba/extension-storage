@@ -1,5 +1,9 @@
-import { StorageArea } from './constants';
-import { validateArgument } from './utils';
+import { validateArgument } from './validate-argument';
+
+enum StorageArea {
+  sync = 'sync',
+  local = 'local',
+}
 
 class ExtensionStorage {
   storageArea: StorageArea

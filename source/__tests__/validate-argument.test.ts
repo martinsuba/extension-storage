@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { validateArgument } from '../utils';
+import { validateArgument } from '../validate-argument';
 
 describe('Utils', () => {
   it('should validate function argument', () => {

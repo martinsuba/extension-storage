@@ -1,7 +1,7 @@
 {
-  "name": "browser-extension-storage",
+  "name": "extension-storage",
   "version": "0.0.1",
-  "description": "Promise wrapper around the browser extension storage api.",
+  "description": "Promise wrapper around the browser (chrome) extension storage api.",
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -10,7 +10,7 @@
     "build:production": "npm run clean && webpack --config ./build/webpack.config.js --mode=production && npm run declaration",
     "lint": "eslint --ignore-path .gitignore . --ext .js,.tsx,.ts",
     "clean": "del-cli dist",
-    "declaration": "tsc -m umd --outFile ./dist/index.js ./source/index.ts --declaration --emitDeclarationOnly"
+    "declaration": "tsc -m umd --outFile ./dist/index.js ./source/extension-storage.ts --declaration --emitDeclarationOnly"
   },
   "keywords": [
     "browser",
@@ -19,14 +19,14 @@
     "api",
     "promise",
     "chrome",
-    "firefox"
+    "firefox",
+    "local",
+    "sync"
   ],
   "author": "Martin Suba",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.7",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.7.7",
     "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-typescript": "^7.7.7",
