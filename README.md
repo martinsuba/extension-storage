@@ -5,7 +5,7 @@
 
 # extension-storage-promise
 
-Promise-based wrapper around the [browser (chrome) extension storage api](https://developer.chrome.com/apps/storage) that makes working with browser storage easier. Works with both `sync` and `local` storageArea.
+Promise-based wrapper around the [browser (chrome) extension storage API](https://developer.chrome.com/apps/storage) that makes working with browser storage easier. Works with both `sync` and `local` storageArea.
 
 ## Install
 
