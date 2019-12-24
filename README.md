@@ -51,49 +51,49 @@ const allRecords = await storage.sync.getAllRecords();
 // resolves object { record1: 'value', record2: 'value2', ... }
 ```
 
-### getRecords(keys: string[]): Promise<Record<string, unknown>>;
+### getRecords(keys: string[]): Promise<Record<string, unknown>>
 Example:
 ```js
 const records = await storage.sync.getRecords(['record1', 'record2']);
 // resolves object { record1: 'value', record2: 'value2' }
 ```
 
-### getOneRecord(key: string): Promise<unknown>;
+### getOneRecord(key: string): Promise<unknown>
 Example:
 ```js
 const record = await storage.sync.getOneRecord('record2');
 // resolves 'value2'
 ```
 
-### setOneRecord(key: string, value: unknown): Promise<void>;
+### setOneRecord(key: string, value: unknown): Promise<void>
 Example:
 ```js
 await storage.sync.setOneRecord('record5', 'value5');
 // adds new record with value 'value5' under key 'record5' to storage object
 ```
 
-### setRecords(records: Record<string, unknown>): Promise<void>;
+### setRecords(records: Record<string, unknown>): Promise<void>
 Example:
 ```js
 await storage.sync.setRecords({ 'record5': 'value5', record6: 'value6', ... });
 // adds multiple new records under given keys to storage object
 ```
 
-### removeOneRecord(key: string): Promise<void>;
+### removeOneRecord(key: string): Promise<void>
 Example:
 ```js
 await storage.sync.removeOneRecord('record3');
 // removes record with key 'record3' from storage object
 ```
 
-### removeRecords(keys: string[]): Promise<void>;
+### removeRecords(keys: string[]): Promise<void>
 Example:
 ```js
 await storage.sync.removeRecords(['record1', 'record2', 'record3']);
 // removes records with keys 'record1', 'record2' and 'record3' from storage object
 ```
 
-### clearRecords(): Promise<void>;
+### clearRecords(): Promise<void>
 Example:
 ```js
 await storage.sync.clearRecords();
