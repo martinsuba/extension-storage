@@ -1,5 +1,5 @@
 {
-  "name": "extension-storage",
+  "name": "extension-storage-promise",
   "version": "0.0.1",
   "description": "Promise-based wrapper around the browser (chrome) extension storage api.",
   "main": "./dist/index.js",
@@ -10,7 +10,7 @@
     "build:production": "npm run clean && webpack --config ./build/webpack.config.js --mode=production && npm run declaration",
     "lint": "eslint --ignore-path .gitignore . --ext .js,.tsx,.ts",
     "clean": "del-cli dist",
-    "declaration": "tsc -m umd --outFile ./dist/index.js ./source/extension-storage.ts --declaration --emitDeclarationOnly"
+    "declaration": "tsc -m umd --outFile ./dist/index.js ./source/extension-storage-promise.ts --declaration --emitDeclarationOnly"
   },
   "keywords": [
     "browser",

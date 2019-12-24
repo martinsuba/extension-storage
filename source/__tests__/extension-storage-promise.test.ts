@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import { expect } from 'chai';
 
-import storage from '../extension-storage';
+import storage from '../extension-storage-promise';
 import {
   getResult, mockStorage, mockThrow, mockLastError,
 } from './storage.mock';

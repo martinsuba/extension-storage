@@ -25,7 +25,7 @@ module.exports = (target) => {
   const config = {
     mode: argv.mode || 'development',
     entry: {
-      index: '../source/extension-storage.ts',
+      index: '../source/extension-storage-promise.ts',
     },
     context: path.resolve(__dirname, '../source'),
     devtool: argv.mode === 'production' ? 'none' : 'inline-source-map',
